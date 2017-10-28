@@ -35,8 +35,9 @@ module.exports = function(bot) {
         params.shift();
         var address = params.join(' ');
 
-		var url = "https://www.google.com/maps/dir/?api=1&origin="+origin+"&destination="+address+"&travelmode=driving";
-		url = encodeURI(url);
+
+		var url = "https://www.google.com/maps/dir/?api=1&origin="+encodeURI(origin)+"&destination="+encodeURI(address)+"&travelmode=driving";
+		// url = encodeURI(url);
 
 
            googleMapsClient.directions({
