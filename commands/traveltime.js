@@ -40,7 +40,7 @@ module.exports = function(bot) {
         var formattedDestination = origin.replace(',','%2C');
         formattedDestination = formattedDestination.replace(' ','+');
 
-		    var url = "https://www.google.com/maps/dir/?api=1&origin="formattedOrigin+"&destination="+formattedDestination+"&travelmode=driving";
+		    var url = "https://www.google.com/maps/dir/?api=1&origin="+formattedOrigin+"&destination="+formattedDestination+"&travelmode=driving";
 
 
            googleMapsClient.directions({
