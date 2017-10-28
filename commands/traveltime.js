@@ -35,9 +35,12 @@ module.exports = function(bot) {
         params.shift();
         var address = params.join(' ');
 
+        var formattedOrigin = origin.replace(',','%2C');
+        formattedOrigin = formattedOrigin.replace(' ','+');
+        var formattedDestination = origin.replace(',','%2C');
+        formattedDestination = formattedDestination.replace(' ','+');
 
-		var url = "https://www.google.com/maps/dir/?api=1&origin="+encodeURI(origin)+"&destination="+encodeURI(address)+"&travelmode=driving";
-		// url = encodeURI(url);
+		    var url = "https://www.google.com/maps/dir/?api=1&origin="formattedOrigin+"&destination="+formattedDestination+"&travelmode=driving";
 
 
            googleMapsClient.directions({
