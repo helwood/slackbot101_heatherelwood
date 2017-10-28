@@ -73,7 +73,7 @@ module.exports = function(bot) {
                                {
                                	"title": "Link",
                                	"value": url,
-                               	"short": true
+                               	"short": false
                                }
                            ]
                       }
